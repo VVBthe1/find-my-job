@@ -1,0 +1,77 @@
+locations: ["Bengaluru", "Pune", "Remote India"]
+skills:
+  must_have:
+    - skill: Python
+      min_exp: 6
+    - skill: PHP
+      min_exp: 6
+  include: ["Django", "MySQL", "PostgreSQL", "AWS", "RabbitMQ", "Event-driven", "Redis"]
+  exclude: ["SAP", "Mainframe", "Salesforce"]
+experience:
+  min_years: 10
+  unknown: keep
+job_types:
+  full_time: true
+  intern: false
+  contract: false
+  freelance: false
+  part_time: false
+pay:
+  min_lpa: 30
+  max_lpa: null
+  unknown: estimate
+  estimate_confidence_min: 0.55
+availability: "30 days notice"
+recency_days: 14
+score_threshold: 0.45
+unknown_recency: keep_with_penalty
+cache:
+  reuse_search: true
+  reuse_llm: true
+  force_refresh: false
+rag:
+  store: chroma
+  persist_dir: data/chroma
+  collection: resumes
+  embeddings: local
+  embedding_model: gemini-embedding-001
+  rebuild_on_resume_change: true
+  min_similarity: 0.20
+  top_k: 5
+  gate_top_n: 80
+llm:
+  # OpenRouter (free models) — set OPENROUTER_API_KEY in .env
+  provider: openai_compatible
+  mode: auto
+  model: openrouter/free
+  base_url: https://openrouter.ai/api/v1
+  # Or Gemini:
+  # provider: google
+  # model: gemini-3.5-flash-lite
+  # base_url: null
+resumes_dir: resumes
+resumes: []
+# resumes:
+#   - file: backend.pdf
+#     label: backend
+#     include: [Django, PostgreSQL, AWS]
+portals:
+  naukri:
+    enabled: true
+    provider: naukri
+  linkedin:
+    enabled: true
+    provider: linkedin
+    max_fetches_per_day: 1
+  indeed_in:
+    enabled: true
+    provider: indeed_in
+  instahyre:
+    enabled: true
+    provider: instahyre
+  wellfound:
+    enabled: true
+    provider: wellfound
+  hirist:
+    enabled: true
+    provider: hirist

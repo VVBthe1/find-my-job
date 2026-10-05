@@ -1,0 +1,76 @@
+# Secrets / personal config
+.env
+.env.*
+!.env.example
+config.yaml
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Runtime data / outputs
+data/
+out/
+*.sqlite
+*.sqlite3
+*.db
+*.log
+
+# User portal plugins
+portals/*.py
+!portals/.gitkeep
+
+# Documents (resumes, cover letters, exports)
+*.pdf
+*.doc
+*.docx
+*.odt
+*.rtf
+*.pages
+*.xls
+*.xlsx
+*.ppt
+*.pptx
+
+# Keep folder + README; don't commit personal resumes
+resumes/*
+!resumes/README.md
+!resumes/.gitkeep
+
+# AI assistants / agent tooling
+.cursor/
+.cursorignore
+.cursorindexingignore
+.cursorrules
+.claude/
+CLAUDE.md
+AGENTS.md
+.aider*
+.continue/
+.codex/
+.gemini/
+GEMINI.md
+.windsurf/
+.windsurfrules
+.copilot/
+.github/copilot-instructions.md
+.specstory/
+.chroma/
+
+# Editors / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
